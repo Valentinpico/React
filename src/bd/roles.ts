@@ -1,86 +1,86 @@
 
-//asistencia de personale por roles
+//Asistencia de personale por roles
 export const ROLES = {
   date: "22/7/2024",
   resgiter: [
     {
-      name: "admin",
-      asist: 0,
+      Name: "admin",
+      Asist: 0,
     },
 
     {
-      name: "user",
-      asist: 20,
+      Name: "user",
+      Asist: 20,
     },
 
     {
-      name: "guest",
-      asist: 0,
+      Name: "guest",
+      Asist: 0,
     },
 
     {
-      name: "editor",
-      asist: 220,
+      Name: "editor",
+      Asist: 220,
     },
 
     {
-      name: "moderator",
-      asist: 0,
+      Name: "moderator",
+      Asist: 0,
     },
 
     {
-      name: "developer",
-      asist: 0,
+      Name: "developer",
+      Asist: 0,
     },
 
     {
-      name: "designer",
-      asist: 0,
+      Name: "designer",
+      Asist: 0,
     },
 
     {
-      name: "tester",
-      asist: 0,
+      Name: "tester",
+      Asist: 0,
     },
 
     {
-      name: "manager",
-      asist: 0,
+      Name: "manager",
+      Asist: 0,
     },
 
     {
-      name: "director",
-      asist: 0,
+      Name: "director",
+      Asist: 0,
     },
 
     {
-      name: "ceo",
-      asist: 0,
+      Name: "ceo",
+      Asist: 0,
     },
 
     {
-      name: "cto",
-      asist: 0,
+      Name: "cto",
+      Asist: 0,
     },
 
     {
-      name: "cfo",
-      asist: 0,
+      Name: "cfo",
+      Asist: 0,
     },
 
     {
-      name: "coo",
-      asist: 0,
+      Name: "coo",
+      Asist: 0,
     },
 
     {
-      name: "cdo",
-      asist: 0,
+      Name: "cdo",
+      Asist: 0,
     },
 
     {
-      name: "ciso",
-      asist: 0,
+      Name: "ciso",
+      Asist: 0,
     },
   ],
 };

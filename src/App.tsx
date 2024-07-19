@@ -23,7 +23,7 @@ function App() {
       setData((prevData) => ({
         ...prevData,
         resgiter: prevData.resgiter.map((rol) => {
-          if (rol.name === name) {
+          if (rol.Name === name) {
             return {
               ...rol,
               asist: value,
@@ -44,7 +44,7 @@ function App() {
     if (consulta) {
       setConsulta(false);
       data.resgiter.map((rol) => {
-        rol.asist = 0;
+        rol.Asist = 0;
       });
       setFecha(fechaHoy);
     }
@@ -72,15 +72,15 @@ function App() {
         <table border={1}>
           <tbody>
             {data.resgiter.map((rol) => (
-              <tr key={rol.name}>
-                <td>{rol.name}</td>
+              <tr key={rol.Name}>
+                <td>{rol.Name}</td>
                 <td>
                   <input
                     disabled={consulta}
                     type="number"
-                    id={rol.name}
-                    value={rol.asist}
-                    onChange={(e) => handlerAsist(e, rol.name)}
+                    id={rol.Name}
+                    value={rol.Asist}
+                    onChange={(e) => handlerAsist(e, rol.Name)}
                   />
                 </td>
               </tr>
