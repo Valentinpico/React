@@ -1,19 +1,4 @@
-/*  "admin",
-"user",
-"guest",
-"editor",
-"moderator",
-"developer",
-"designer",
-"tester",
-"manager",
-"director",
-  "ceo",
-  "cto",
-  "cfo",
-  "coo",
-  "cdo",
-  "ciso", */
+
 //asistencia de personale por roles
 export const ROLES = {
   date: "2021-09-01",
