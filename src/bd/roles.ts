@@ -1,7 +1,7 @@
 
 //asistencia de personale por roles
 export const ROLES = {
-  date: "2021-09-01",
+  date: "22/7/2024",
   resgiter: [
     {
       name: "admin",
@@ -10,7 +10,7 @@ export const ROLES = {
 
     {
       name: "user",
-      asist: 0,
+      asist: 20,
     },
 
     {
@@ -20,7 +20,7 @@ export const ROLES = {
 
     {
       name: "editor",
-      asist: 0,
+      asist: 220,
     },
 
     {
