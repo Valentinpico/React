@@ -1,16 +1,42 @@
+import { saveCart } from "../bd/localStorage";
 import { GuitarModel } from "../models/guitarModel";
+import { changueQuantity, postGuitarInCart } from "../services/guitars";
 
 interface GuitarProps {
   guitar: GuitarModel;
+  cart: GuitarModel[];
+  setCart: Function;
 }
 
-export const Guitar = ({ guitar }: GuitarProps) => {
+export const Guitar = ({ guitar, setCart, cart }: GuitarProps) => {
+  const addToCart = async () => {
+    const guitarIndex = cart.findIndex(
+      (guitarItem) => guitarItem.idGuitar === guitar.id
+    );
+    
+    if (guitarIndex === -1) {
+      console.log(guitar);
+      const newCart = await postGuitarInCart(guitar);
+      setCart(newCart);
+      return;
+    }
+    
+    const newGuitar = cart[guitarIndex];
+
+    if (newGuitar.quantity! == 5) return;
+    newGuitar.quantity! += 1;
+    console.log(newGuitar);
+
+    const newCart = await changueQuantity(newGuitar);
+    setCart(newCart); /*  */
+  };
+
   return (
     <div className="col-md-6 col-lg-4 my-4 row align-items-center">
       <div className="col-4">
         <img
           className="img-fluid"
-          src={"./public/img/" + guitar.image + ".jpg"}
+          src={"./img/" + guitar.image + ".jpg"}
           alt="imagen guitarra"
         />
       </div>
@@ -20,7 +46,11 @@ export const Guitar = ({ guitar }: GuitarProps) => {
         </h3>
         <p>{guitar.description}</p>
         <p className="fw-black text-primary fs-3">${guitar.price}</p>
-        <button type="button" className="btn btn-dark w-100">
+        <button
+          onClick={addToCart}
+          type="button"
+          className="btn btn-dark w-100"
+        >
           Agregar al Carrito
         </button>
       </div>

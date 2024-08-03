@@ -32,8 +32,8 @@ INSERT INTO Rol (id, nombre) VALUES
 
 
 
-SELECT * FROM Dia 
-delete  from Dia
+--SELECT * FROM Dia 
+--delete  from Dia
 
 
 
